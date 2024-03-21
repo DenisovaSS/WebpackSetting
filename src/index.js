@@ -1,5 +1,5 @@
 import "./index.html";
-import "./style.css";
+import "./style.scss";
 const mult = (a, b) => a + b;
 console.log(mult(4, 6));
 console.log(mult(10, 6));

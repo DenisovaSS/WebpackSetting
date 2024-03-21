@@ -12,4 +12,8 @@ Project Webpack
 -npm install --save-dev html-webpack-plugin(for working with HTML)
 -npm install --save-dev html-loader( for updating html after change)(you need to write in index.js in top (import "./index.html"; for waching html))
 -npm install --save-dev style-loader(for plugin css)
--npm install --save-dev css-loader
+-npm install --save-dev css-loader(for plugin css)
+-npm install --save-dev mini-css-extract-plugin(This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS)
+-npm install sass-loader sass webpack --save-dev(if you use sass)
+If you want to use something not supported in some browsers, to use:
+-npm install --save-dev postcss-loader postcss postcss-preset-env(prefix)

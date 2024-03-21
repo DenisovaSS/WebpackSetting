@@ -1,5 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PostcssPresetEnv = require("postcss-preset-env");
+
 const mode = process.env.NODE_ENV || "development";
 const devMode = mode === "development";
 const target = devMode ? "web" : "browserslist";
@@ -8,6 +11,9 @@ module.exports = {
   mode,
   target,
   devtool,
+  devServer: {
+    open: true,
+  },
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -18,6 +24,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"),
     }),
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
   ],
   module: {
     rules: [
@@ -26,8 +33,20 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.(c|sa|sc)ss$/i,
+        use: [
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [PostcssPresetEnv],
+              },
+            },
+          },
+          "sass-loader",
+        ],
       },
     ],
   },
