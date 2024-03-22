@@ -9,8 +9,7 @@
     "build": "webpack --node-env=production",
     "clear": "rd /s /q dist",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
-    "prepare": ".husky/pre-commit"
+    "lint:fix": "eslint ./src --fix"
   },
   "author": "DenysovaSS",
   "license": "ISC",
