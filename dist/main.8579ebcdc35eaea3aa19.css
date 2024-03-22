@@ -354,4 +354,4 @@ template {
   display: none;
 }
 
-body{background-color:#ffed47;color:tomato;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+@font-face{font-family:"MadimiOne";src:url(fonts/ResotE-Rose-89c1..woff) format("woff")}@font-face{font-family:"BrandaYolq";src:url(fonts/Branda-yolq..ttf) format("truetype")}body{background-color:#82d177;color:tomato;-webkit-user-select:none;-moz-user-select:none;user-select:none}h1{font-family:"MadimiOne"}p{font-family:"BrandaYolq";font-size:40px}.image{width:300px;height:200px;background-size:cover;background-image:url(img/pensil..jpg)}

@@ -16,4 +16,5 @@ Project Webpack
 -npm install --save-dev mini-css-extract-plugin(This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS)
 -npm install sass-loader sass webpack --save-dev(if you use sass)
 If you want to use something not supported in some browsers, to use:
--npm install --save-dev postcss-loader postcss postcss-preset-env(prefix)
+-npm install --save-dev postcss-loader postcss postcss-preset-env(prefix);
+-npm install image-webpack-loader --save-dev (to compress images)
