@@ -12,26 +12,26 @@ module.exports = {
   target,
   devtool,
   devServer: {
-    open: true,
+    open: true
   },
   entry: path.resolve(__dirname, "src", "index.js"),
   output: {
     path: path.resolve(__dirname, "dist"),
     clean: true,
     filename: "main.js",
-    assetModuleFilename: "assets/[name].[ext]",
+    assetModuleFilename: "assets/[name].[ext]"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html"),
+      template: path.resolve(__dirname, "src", "index.html")
     }),
-    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" }),
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" })
   ],
   module: {
     rules: [
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: "html-loader"
       },
       {
         test: /\.(c|sa|sc)ss$/i,
@@ -42,17 +42,17 @@ module.exports = {
             loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: [PostcssPresetEnv],
-              },
-            },
+                plugins: [PostcssPresetEnv]
+              }
+            }
           },
-          "sass-loader",
-        ],
+          "sass-loader"
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
-        generator: { filename: "fonts/[name].[ext]" },
+        generator: { filename: "fonts/[name].[ext]" }
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -61,29 +61,29 @@ module.exports = {
             loader: "image-webpack-loader",
             options: {
               mozjpeg: {
-                progressive: true,
+                progressive: true
               },
               // optipng.enabled: false will disable optipng
               optipng: {
-                enabled: false,
+                enabled: false
               },
               pngquant: {
                 quality: [0.65, 0.9],
-                speed: 4,
+                speed: 4
               },
               gifsicle: {
-                interlaced: false,
+                interlaced: false
               },
               // the webp option will enable WEBP
               webp: {
-                quality: 75,
-              },
-            },
-          },
+                quality: 75
+              }
+            }
+          }
         ],
         type: "asset/resource",
-        generator: { filename: "img/[name].[ext]" },
-      },
-    ],
-  },
+        generator: { filename: "img/[name].[ext]" }
+      }
+    ]
+  }
 };
