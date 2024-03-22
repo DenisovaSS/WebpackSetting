@@ -15,8 +15,7 @@ Project Webpack -**git init**
 -**npm install --save-dev mini-css-extract-plugin**(This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS)  
 -**npm install sass-loader sass webpack --save-dev**(if you use sass)  
 If you want to use something not supported in some browsers, to use:  
--**npm install --save-dev postcss-loader postcss postcss-preset-env**(prefix)  
--**npm install image-webpack-loader --save-dev** (to compress images)
+-**npm install --save-dev postcss-loader postcss postcss-preset-env**(prefix)
 
 # ESLint, Prettier, Husky setting
 
@@ -24,4 +23,5 @@ If you want to use something not supported in some browsers, to use:
 -**npm i --save-dev eslint-config-airbnb**(airbnb JavaScript Style Guide )  
 -**npm i --save-dev eslint-config-prettier eslint-plugin-prettier** (for work together prettier and eslint)  
 -**npm i --save-dev eslint-plugin-html**(for html type)  
--**npm i --save-dev eslint-plugin-import**(for check problem with import, and help with not good path for files)
+-**npm i --save-dev eslint-plugin-import**(for check problem with import, and help with not good path for files)  
+-**npm install --save-dev husky**(if need check before commit)
