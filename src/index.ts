@@ -7,8 +7,9 @@ const imgElem = document.querySelector('.img');
 const img = new Image();
 img.src = cup;
 img.width = 200;
-imgElem.append(img);
-
+if (imgElem) {
+  imgElem.append(img);
+}
 console.log(mult(4, 6));
 console.log(mult(10, 6));
 console.log('my favoryte');
