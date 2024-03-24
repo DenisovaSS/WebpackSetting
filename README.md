@@ -32,3 +32,11 @@ If you want to use something not supported in some browsers, to use:
 -**npm install -D ts-loader** (this is the TypeScript loader for webpack) -**npm install -D @typescript-eslint/eslint-plugin** (a ESLint plugin which provides lint rules for TypeScript codebases.)  
 -**npm install -D @typescript-eslint/parser**(An ESLint parser which leverages TypeScript ESTree to allow for ESLint to lint TypeScript source code.)
 -if you use typescript and you have in your project airbnb rules, you need obligatory add **npm install -D eslint-config-airbnb-typescript**
+
+# For auto deploy on github:
+
+-**npm i -D gh-pages**(В package.json к имеющимся командам в раздел "scripts" добавляем:
+"deploy": "npm run build && npx gh-pages -d dist -e hangman"
+
+Здесь аргументы: -d - из какого каталога брать файлы для развертывания и -e в какой каталог на gh-pages заливать
+(по умолчанию в корень, нам это не надо, у школьных проектов у каждого свой каталог))
