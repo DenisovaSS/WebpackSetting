@@ -26,7 +26,7 @@ If you want to use something not supported in some browsers, to use:
 -**npm i --save-dev eslint-plugin-import**(for check problem with import, and help with not good path for files)  
 -**npm install --save-dev husky**(if need check before commit)
 
-#Typescript setting
+# Typescript setting
 
 -**npm install -D typescript**  
 -**npm install -D ts-loader** (this is the TypeScript loader for webpack) -**npm install -D @typescript-eslint/eslint-plugin** (a ESLint plugin which provides lint rules for TypeScript codebases.)  
